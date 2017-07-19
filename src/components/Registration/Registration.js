@@ -31,21 +31,24 @@ class Registration extends Component {
 
 	render() {
 		return (
-			<div className="Registration">
-				<form onSubmit={this.handleSubmit}>
-					<label>
-						<input type="email" name="email" value={this.state.email} onChange={this.handleInputChange} placeholder='Your email' />
-					</label>
-					<label>
-						<input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} placeholder='Your password' />
-					</label>
-					<label>
-						<input type="password" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleInputChange} placeholder='Confirm password' />
-					</label>
-					<input type="submit" value="Submit" />
-				</form>
-
-				<h1>Registration page!!!</h1>
+			<div className="Registration bs-example container-fluid">
+				<div className="jumbotron row">
+					<form onSubmit={this.handleSubmit} className="col-md-6 col-md-offset-3">
+						<h4>For registration please enter your email and password</h4>
+						<div className="form-group">
+							<input type="email" name="email" className="form-control" value={this.state.email} onChange={this.handleInputChange} placeholder='Your email' />
+						</div>
+						<div className="form-group">
+							<input type="password" name="password" className="form-control" value={this.state.password} onChange={this.handleInputChange} placeholder='Your password' />
+						</div>
+						<div className="form-group">
+							<input type="password" name="confirmPassword" className="form-control" value={this.state.confirmPassword} onChange={this.handleInputChange} placeholder='Confirm password' />
+						</div>
+						<div className="form-group">
+							<input type="submit" value="Registration" className="btn btn-success" />
+						</div>
+					</form>
+				</div>
 			</div>
 		);
 	}

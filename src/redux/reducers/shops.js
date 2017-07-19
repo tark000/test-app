@@ -3,26 +3,7 @@ import { SHOP_REQUEST_STARTED, SHOP_REQUEST_FINISHED, SHOP_REQUEST_ERROR } from 
 
 const initialState = {
 	shops: [
-		{
-			guid: 1,
-		  title: 'Photobin1',
-		  body: 'Id dolor ipsum irure nulla deserunt ipsum tempor cupidatat est ex veniam.'
-		},
-		{
-			guid: 2,
-		  title: 'Photobin2',
-		  body: 'Id dolor ipsum irure nulla deserunt ipsum tempor cupidatat est ex veniam.'
-		},
-		{
-			guid: 3,
-		  title: 'Photobin3',
-		  body: 'Id dolor ipsum irure nulla deserunt ipsum tempor cupidatat est ex veniam.'
-		},
-		{
-			guid: 4,
-		  title: 'Photobin4',
-		  body: 'Id dolor ipsum irure nulla deserunt ipsum tempor cupidatat est ex veniam.'
-		}
+		
 	]
 }
 

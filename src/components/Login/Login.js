@@ -29,18 +29,21 @@ class Login extends Component {
 
 	render() {
 		return (
-			<div className="Login">
-				<form onSubmit={this.handleSubmit}>
-					<label>
-						<input type="text" name="email" value={this.state.email} onChange={this.handleInputChange} placeholder='Your email' />
-					</label>
-					<label>
-						<input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} placeholder='Your password' />
-					</label>
-					<input type="submit" value="Submit" />
-				</form>
-
-				<h1>Login page!!!</h1>
+			<div className="Login bs-example container-fluid">
+				<div className="jumbotron row">
+					<form onSubmit={this.handleSubmit} className="col-md-6 col-md-offset-3">
+						<h3>Please enter your email and password</h3>
+						<div className="form-group">
+							<input type="email" name="email" className="form-control" value={this.state.email} onChange={this.handleInputChange} placeholder='Your email' />
+						</div>
+						<div className="form-group">
+							<input type="password" name="password" className="form-control" value={this.state.password} onChange={this.handleInputChange} placeholder='Your password' />
+						</div>
+						<div className="form-group">
+							<input type="submit" value="Login" className="btn btn-success" />
+						</div>
+					</form>
+				</div>
 			</div>
 		);
 	}

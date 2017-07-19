@@ -22,7 +22,7 @@ function shopRequestError(errors) {
 export function shopRequest() {
   return (dispatch) => {
     dispatch(shopRequestStarted());
-    return fetch('//offline-news-api.herokuapp.com/stories')
+    return fetch('http://www.json-generator.com/api/json/get/bZTcBnsIgO')
     .then(function (response) {
 	    if (response.status >= 400) {
 	        throw new Error("Bad response from server");

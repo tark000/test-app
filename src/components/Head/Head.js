@@ -25,6 +25,7 @@ class Head extends Component {
 			            <li><Link to="/shop" className="page-scroll">Shop</Link></li>
 			            <li><Link to="/registration" className="page-scroll">Registration</Link></li>
 			            <li><Link to="/login" className="page-scroll">Login</Link></li>
+			            <li><Link to="/login" className="page-scroll">Logout</Link></li>
 				      </ul>
 				      
 				    </div>
