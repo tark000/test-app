@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
+import { userLogout } from '../../redux/actions/userActions';
 
 class Head extends Component {
 	render() {
-		const { name} = this.props.user
+		const { email, auth } = this.props.user
+		const { dispatch } = this.props
+		const Logout = () => <li><a onClick={() => dispatch(userLogout())} className="page-scroll ">Logout</a></li>
+
 		return (
 			<div className="Head">
 				<nav className="navbar navbar-default">
@@ -16,7 +20,7 @@ class Head extends Component {
 				        <span className="icon-bar"></span>
 				        <span className="icon-bar"></span>
 				      </button>
-				      <a className="navbar-brand" href="/">Bran, Hi { name } </a>
+				      <a className="navbar-brand" href="/">{ auth ? 'Hi' + email : 'Welcome'}</a>
 				    </div>
 
 				    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -25,7 +29,7 @@ class Head extends Component {
 			            <li><Link to="/shop" className="page-scroll">Shop</Link></li>
 			            <li><Link to="/registration" className="page-scroll">Registration</Link></li>
 			            <li><Link to="/login" className="page-scroll">Login</Link></li>
-			            <li><Link to="/login" className="page-scroll">Logout</Link></li>
+			            { auth ? <Logout /> : ''}
 				      </ul>
 				      
 				    </div>

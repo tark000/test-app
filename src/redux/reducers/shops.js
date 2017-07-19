@@ -1,4 +1,3 @@
-
 import { SHOP_REQUEST_STARTED, SHOP_REQUEST_FINISHED, SHOP_REQUEST_ERROR } from '../actions/shopActions';
 
 const initialState = {
@@ -12,7 +11,7 @@ export default function page(state = initialState, action) {
     case SHOP_REQUEST_STARTED:
       return Object.assign({}, state);
     case SHOP_REQUEST_FINISHED:
-      return { ...state, shops: action.shops }
+      return { ...state, shops: action.shops };
     case SHOP_REQUEST_ERROR:
       return Object.assign({}, state);
     default:

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { userLogin } from '../../redux/actions/userActions';
 
 class Login extends Component {
 	constructor(props) {
@@ -23,7 +25,8 @@ class Login extends Component {
 
 
 	handleSubmit(event) {
-		console.log(this.state);
+		const { dispatch } = this.props
+		dispatch(userLogin(this.state))
 		event.preventDefault();
 	}
 
@@ -40,7 +43,7 @@ class Login extends Component {
 							<input type="password" name="password" className="form-control" value={this.state.password} onChange={this.handleInputChange} placeholder='Your password' />
 						</div>
 						<div className="form-group">
-							<input type="submit" value="Login" className="btn btn-success" />
+							<input type="submit" value="Sign-in" className="btn btn-success" />
 						</div>
 					</form>
 				</div>
@@ -49,4 +52,10 @@ class Login extends Component {
 	}
 }
 
-export default Login;
+function mapStateToProps (state) {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(Login);

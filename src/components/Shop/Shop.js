@@ -11,15 +11,9 @@ class Shop extends Component {
 		this.state = {
 			activePage: 0
 		}
-
 		this.getInitialState = this.getInitialState.bind(this);
 		this.handleSelect = this.handleSelect.bind(this);
 	}
-
-
-	static propTypes = {
-	    dispatch: PropTypes.func.isRequired
-	};
 
 	componentDidMount() {
 		const { dispatch } = this.props
@@ -50,8 +44,6 @@ class Shop extends Component {
 		);
 		return (
 			<div className="Shop">
-				
-
 				<div className="table-responsive">
 				  <table className="table">
 				  	<thead> 
