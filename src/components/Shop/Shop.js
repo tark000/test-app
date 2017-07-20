@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { shopRequest } from '../../redux/actions/shopActions';
-import PropTypes from 'prop-types';
 import { Pagination } from 'react-bootstrap';
 import './shops.css';
 

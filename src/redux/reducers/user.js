@@ -1,4 +1,4 @@
-import { USER_REGISTRATION, USER_LOGIN, USER_LOGOUT } from '../actions/userActions';
+import { USER_REGISTRATION, USER_LOGIN, USER_LOGOUT, USER_LOGIN_ERROR } from '../actions/userActions';
 
 const initialState = {
   email: 'Аноним',

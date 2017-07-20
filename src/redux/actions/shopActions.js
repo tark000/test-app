@@ -12,10 +12,6 @@ function shopRequestFinished(shops) {
   return { type: SHOP_REQUEST_FINISHED, shops };
 }
 
-function shopRequestError(errors) {
-  return { type: SHOP_REQUEST_ERROR, errors };
-}
-
 export function shopRequest() {
     return (dispatch) => {
 	    dispatch(shopRequestStarted());

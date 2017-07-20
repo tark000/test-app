@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { userLogout } from '../../redux/actions/userActions';
 
 class Head extends Component {
@@ -8,7 +8,8 @@ class Head extends Component {
 		const { email, auth } = this.props.user
 		const { dispatch } = this.props
 		const Logout = () => <li><a onClick={() => dispatch(userLogout())} className="page-scroll ">Logout</a></li>
-
+		const ShopLink = () => <li><Link to="/shop" className="page-scroll">Shop</Link></li>
+		
 		return (
 			<div className="Head">
 				<nav className="navbar navbar-default">
@@ -20,13 +21,13 @@ class Head extends Component {
 				        <span className="icon-bar"></span>
 				        <span className="icon-bar"></span>
 				      </button>
-				      <a className="navbar-brand" href="/">{ auth ? 'Hi' + email : 'Welcome'}</a>
+				      <a className="navbar-brand" href="/">{ auth ? 'Hi ' + email : 'Welcome'}</a>
 				    </div>
 
 				    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul className="nav navbar-nav">
 				        <li><Link to="/" className="page-scroll">Home</Link></li>
-			            <li><Link to="/shop" className="page-scroll">Shop</Link></li>
+			            { auth ? <ShopLink /> : ''}
 			            <li><Link to="/registration" className="page-scroll">Registration</Link></li>
 			            <li><Link to="/login" className="page-scroll">Login</Link></li>
 			            { auth ? <Logout /> : ''}
