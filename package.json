@@ -2,7 +2,7 @@
   "name": "test-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/tark000/test-app.git",
+  "homepage": "https://github.com/tark000/tark000.github.io.git",
   "dependencies": {
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
