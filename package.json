@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://github.com/tark000/test-app.git",
-  "deploy" : "npm run build&&gh-pages -d build",
   "dependencies": {
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
@@ -24,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "deploy" : "npm run build&&gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }
