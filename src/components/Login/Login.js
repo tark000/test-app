@@ -39,7 +39,7 @@ class Login extends Component {
 	}
 
 	isUser(user) {
-		return user.email == this.state.user.email && user.password == this.state.user.password;
+		return user.email === this.state.user.email && user.password === this.state.user.password;
 	}
 
 	handleSubmit(event) {

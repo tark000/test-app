@@ -35,7 +35,7 @@ class Registration extends Component {
 
 	handleSubmit(event) {
 		this.setState({warning: {showWarning: false}});
-		if (this.state.user.email && this.state.user.password && this.state.user.confirmPassword && this.state.user.password != this.state.user.confirmPassword) {
+		if (this.state.user.email && this.state.user.password && this.state.user.confirmPassword && this.state.user.password === this.state.user.confirmPassword) {
 			const { dispatch } = this.props;
 			dispatch(userRegistration(this.state.user));
 			let user = {email: '', password: '', confirmPassword: ''};
